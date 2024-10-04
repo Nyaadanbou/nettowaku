@@ -1,11 +1,10 @@
-package cc.mewcraft.networkutils;
+package cc.mewcraft.nettowaku;
 
 import net.luckperms.api.LuckPermsProvider;
 
 import java.util.function.Supplier;
 
 public final class ServerInfo {
-
     /**
      * Get the "server-id" of this server.
      * <p>
@@ -19,9 +18,9 @@ public final class ServerInfo {
      */
     public static final Supplier<String> SERVER_NAME;
 
+    // 初始化静态变量
     static {
         SERVER_ID = () -> LuckPermsProvider.get().getContextManager().getStaticContext().getAnyValue(NetworkConstants.SERVER_ID_KEY).orElseThrow();
         SERVER_NAME = () -> LuckPermsProvider.get().getContextManager().getStaticContext().getAnyValue(NetworkConstants.SERVER_NAME_KEY).orElseThrow();
     }
-
 }

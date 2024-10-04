@@ -1,4 +1,4 @@
-package cc.mewcraft.networkutils;
+package cc.mewcraft.nettowaku;
 
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
@@ -95,7 +95,6 @@ public final class OriginUtils {
         luckPerms.getUserManager().saveUser(user);
     }
 
-    //<editor-fold desc="Expanded Methods">
     public static @Nullable String getOriginId(@NonNull UUID uuid) {
         return getUser(uuid).map(OriginUtils::getOriginId).orElse(null);
     }
@@ -123,7 +122,6 @@ public final class OriginUtils {
     private static @NonNull Optional<User> getUser(@NonNull UUID uuid) {
         return Optional.ofNullable(LuckPermsProvider.get().getUserManager().getUser(uuid));
     }
-    //</editor-fold>
 
     private OriginUtils() {
         throw new UnsupportedOperationException("This class cannot be instantiated");

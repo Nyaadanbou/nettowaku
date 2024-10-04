@@ -1,4 +1,4 @@
-package cc.mewcraft.networkutils;
+package cc.mewcraft.nettowaku;
 
 import net.luckperms.api.node.types.MetaNode;
 
@@ -16,6 +16,7 @@ public class OriginMeta {
      */
     public static final Supplier<MetaNode> SERVER_ORIGIN_NAME_KEY;
 
+    // 初始化静态变量
     static {
         SERVER_ORIGIN_ID = () -> MetaNode.builder(NetworkConstants.SERVER_ORIGIN_ID_KEY, ServerInfo.SERVER_ID.get()).build();
         SERVER_ORIGIN_NAME_KEY = () -> MetaNode.builder(NetworkConstants.SERVER_ORIGIN_NAME_KEY, ServerInfo.SERVER_NAME.get()).build();
