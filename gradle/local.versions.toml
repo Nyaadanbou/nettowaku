@@ -1,0 +1,18 @@
+[versions]
+
+shadow = "8.3.0"
+nyaadanbou-conventions = "1.0-SNAPSHOT"
+luckperms = "5.4"
+checker-qual = "3.48.0"
+
+[libraries]
+
+# Gradle plugins
+
+plugin-shadow = { group = "com.gradleup.shadow", name = "shadow-gradle-plugin", version.ref = "shadow" }
+plugin-nyaadanbou-conventions = { group = "cc.mewcraft.gradle", name = "conventions", version.ref = "nyaadanbou-conventions" }
+
+# Code dependencies
+
+luckperms = { group = "net.luckperms", name = "api", version.ref = "luckperms" }
+checker-qual = { group = "org.checkerframework", name = "checker-qual", version.ref = "checker-qual" }

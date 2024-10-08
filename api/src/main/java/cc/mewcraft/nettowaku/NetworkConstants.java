@@ -1,4 +1,4 @@
-package cc.mewcraft.networkutils;
+package cc.mewcraft.nettowaku;
 
 public final class NetworkConstants {
 
